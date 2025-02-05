@@ -26,14 +26,10 @@ export default function NewQuizForm() {
     // create the new quiz here
 
     const quizId = uuidv4();
+    const id = uuidv4();
 
     // dispatch add quiz action
-    dispatch(addQuiz({
-      id: quizId,
-      name: name,
-      topicId: topicId,
-      cardIds: cardIds
-    }));
+    dispatch(addQuiz({ id, name, topicId, cardIds }));
     navigate(ROUTES.quizzesRoute())
   };
 
